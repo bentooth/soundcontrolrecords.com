@@ -39,6 +39,7 @@ class ArtistProfile extends React.Component {
                     <br />
                     <div className="container">
                         <Nav />
+                        <div>dogs!</div>
                     </div>
                     <div className="container">
 
