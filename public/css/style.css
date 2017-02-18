@@ -1,0 +1,266 @@
+@import url('navigation.css');
+@import url('https://fonts.googleapis.com/css?family=Abel|Cabin:400,700');
+
+h1, h2, h3, a {
+    color: black;
+    font-family: 'Abel';
+}
+
+#releaseTitle {
+    text-align: center;
+}
+
+p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
+}
+
+#footer {
+    height: 60px;
+    background-color: black;
+    margin-top:80px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer {
+    background-color:black;
+}
+
+#footer p {
+    color:white;
+    padding-left: 30px;
+}
+
+#social {
+    list-style-type:none
+}
+
+.header-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.artist-photo{
+    height: 127px;
+    width: 359px;
+}
+
+.artist-header {
+    height:200px;
+    margin-bottom:30px;
+}
+.artist-header h1 {
+    color: white;
+}
+
+.navbar {
+    font-size: medium;
+}
+
+.navbar-brand {
+    font-size: xx-large;
+}
+
+.page-header {
+    text-align: right;
+}
+
+.news-body {
+    font-size: large;
+}
+
+.btn-spotify {
+    width: 100px !important;
+    background-color: #1DD069;
+    border-color: #1DD069;
+    font-size: large;
+}
+.btn-spotify:hover {
+    background-color: #1DD069;
+}
+
+.btn-spotify:visited {
+    background-color: #1DD069;
+    border-color: #1DD069;
+}
+
+.btn-buy {
+    width: 100px !important;
+    background-color: black;
+    border-color: black;
+    font-size: large;
+}
+.btn-buy:hover {
+    background-color: black;
+    border-color: black;
+}
+
+.btn-buy:visited {
+    background-color: black;
+    border-color: black;
+}
+
+.btn-artist {
+    width: 100px !important;
+    background-color: purple;
+    border-color: purple;
+    font-size: large;
+}
+.btn-artist:hover {
+    background-color: purple;
+    border-color: purple;
+}
+
+.btn-artist:visited {
+    background-color: purple;
+    border-color: purple;
+}
+.myButton {
+    -moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    -webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #6c7c7c));
+    background:-moz-linear-gradient(top, #000000 5%, #6c7c7c 100%);
+    background:-webkit-linear-gradient(top, #000000 5%, #6c7c7c 100%);
+    background:-o-linear-gradient(top, #000000 5%, #6c7c7c 100%);
+    background:-ms-linear-gradient(top, #000000 5%, #6c7c7c 100%);
+    background:linear-gradient(to bottom, #000000 5%, #6c7c7c 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#6c7c7c',GradientType=0);
+    background-color:#000000;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    border:1px solid #566963;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:'Abel';
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 117px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+}
+.myButton:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #000000));
+    background:-moz-linear-gradient(top, #6c7c7c 5%, #000000 100%);
+    background:-webkit-linear-gradient(top, #6c7c7c 5%, #000000 100%);
+    background:-o-linear-gradient(top, #6c7c7c 5%, #000000 100%);
+    background:-ms-linear-gradient(top, #6c7c7c 5%, #000000 100%);
+    background:linear-gradient(to bottom, #6c7c7c 5%, #000000 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#000000',GradientType=0);
+    background-color:#6c7c7c;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+.artist-links {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+/* featured jumbotron */
+#featureWrapper{
+    position: relative;
+    z-index: 1;
+}
+#featuretron{
+    border-radius: 2vw 2vw 0% 0%;
+    background: yellow;
+}
+/* artist icon that appears over feature banner to show user who is featured if necessary */
+.feature-icon{
+    position: absolute;
+    display: block;
+    z-index: 2;
+    right: 0px;
+    background-position: center;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    transform: translate(10px, 10px);
+    -moz-transform: translate(10px, 10px);
+    -webkit-transform: translate(10px, 10px);
+    -ms-transform: translate(10px, 10px);
+    animation: lightLanding 2s ease-in-out normal forwards;
+    -moz-animation: lightLanding 2s ease-in-out normal forwards;
+    background: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50% 50% 50% 50%;
+}
+.feature-text {
+    position: relative;
+    font-size: 16px;
+}
+.feature-text h1{
+    position: relative;
+    transform: translateX(-40%);
+    left: 50%;
+}
+.feature-text p{
+    padding: 2em;
+}
+.feature-text p:first-letter{
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: -2px 1px rgba(255,0,0,.5);
+}
+.feature-text p:first-line {
+    color: purple;
+}
+/* audio player options*/
+.player-components{
+    width: 25px;
+    height: 25px;
+    color: white;
+    transition: background 1s;
+}
+.player-components span[class *= 'glyphicon']{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.player-components:hover{
+    cursor: pointer;
+}
+.player-wrapper{
+   position: absolute;
+   z-index:0;
+}
+/* animations */
+@keyframes lightLanding {
+    0%{
+      opacity: 0;
+      transform: translate(10px, -10px);  
+    }
+    100%{
+      opacity: 1;
+      transform: translate(10px, 10px);
+    }
+}
+@-moz-keyframes lightLanding {
+    0%{
+      opacity: 0;
+      transform: translate(10px, -10px);  
+    }
+    100%{
+      opacity: 1;
+      transform: translate(10px, 10px);
+    }
+}
