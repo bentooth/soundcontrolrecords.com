@@ -1,6 +1,8 @@
 @import url('navigation.css');
 @import url('https://fonts.googleapis.com/css?family=Abel|Cabin:400,700');
 
+
+
 h1, h2, h3, a {
     color: black;
     font-family: 'Abel';
@@ -19,7 +21,7 @@ p {
     height: auto !important;
     height: 100%;
     /* Negative indent footer by it's height */
-    margin: 0 auto -60px;
+    margin: 0 auto 350px;
 }
 
 #footer {
@@ -28,10 +30,6 @@ p {
     margin-top:80px;
     padding-top:20px;
     padding-bottom:20px;
-}
-
-#footer {
-    background-color:black;
 }
 
 #footer p {
