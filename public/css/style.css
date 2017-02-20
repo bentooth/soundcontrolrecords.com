@@ -1,8 +1,6 @@
 @import url('navigation.css');
 @import url('https://fonts.googleapis.com/css?family=Abel|Cabin:400,700');
 
-
-
 h1, h2, h3, a {
     color: black;
     font-family: 'Abel';
@@ -13,7 +11,20 @@ h1, h2, h3, a {
 }
 
 p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family :Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+.center {
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+    mso-line-height-rule: exactly;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #202020;
+    font-family: Helvetica;
+    font-size: 16px;
+    line-height: 150%;
 }
 
 #wrap {

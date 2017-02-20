@@ -10,13 +10,12 @@ const Blog = () => {
             <p>
                 by Ben
             </p>
-            <img className="img-responsive" src="images/ND.jpg" role="presentation"></img><br />
-            <p>The Fourier transform decomposes a function of time (a signal) into the frequencies that make it up,
-                in a way similar to how a musical chord can be expressed as the frequencies (or pitches) of its
-                constituent notes. The Fourier transform of a function of time itself is a complex-valued function
-                of frequency, whose absolute value represents the amount of that frequency present in the original
-                function, and whose complex argument is the phase offset of the basic sinusoid in that frequency.
-                The Fourier transform is called the frequency domain representation of the original signal.
+            <img className="img-responsive center-block" src="images/ND-RiseFall.jpg" role="presentation"></img><br />
+            <i className="center">"True to the Night Drive ethos, the song boasts exactly the kind of glossy, echoed Interpol and Lower Dens vibes that are ideal to put on while rocketing down the interstate at 90mph in the dead of night"</i>
+            <br /><p className="center">-<strong>Spin Magazine</strong></p>
+            <p className="center">Appearing from Texas in 2013, the duo, <strong>Night Drive</strong>, has been creating synth-pop that is both dark and energetic. Both brought together by a tragic life event, Rodney Connell and Brandon Duhon saw a future in music together. Their infectious melodies combined with pulsing dance beats unveil a stylish, energetic sound which has been synchronized in film, tv, radio and other creative work. They have opened for many well-known bands such as <strong>CHVRCHES, YACHT, Robert Delong, Telsa Boy and Miami Horror.</strong><br/>
+                <br/>
+                Dropping the single, “Rise and Fall,” Night Drive begins to gear up for their new album, which is debuting early next year. In “Rise and Fall,” the band tampers with the synthesizer to create a dream-like atmosphere and the lyrics reveal a dilemma between two lovers. Night Drive is a dark electro-pop songwriting team with a futuristic sound that's definitely on course to being a sensation. The band explains, <i>"'Rise and Fall' is about unexpected change as two people find themselves going in different directions. A sudden and untimely break-up. Fuzzy keyboards and ethereal textures float in the stratosphere while an energetic rhythm section pulses underneath an emotionally charged vocal melody. "</i>
             </p>
             <br />
             <iframe width="100%" height="450" scrolling="no" frameborder="no"

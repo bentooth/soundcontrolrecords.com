@@ -7,7 +7,12 @@ const ArtistSummary = ({artists}) => {
             {artists.map((artist, index) => {
                 return (
                     <Link to={artist.path}>
-                        <div style={ {backgroundImage: 'url(' + artist.header + ')'}}
+                        <div style={
+                            {
+                                backgroundImage: 'url(' + artist.header + ')',
+                                'background-position': 'center'
+                            }
+                        }
                              className='artist-header col-lg-12 col-md-12 img-responsive' role="presentation"
                              key={index}>
                             <h1>{artist.name}</h1>

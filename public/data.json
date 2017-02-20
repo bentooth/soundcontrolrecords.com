@@ -6,12 +6,13 @@
       "path": "/MNYNMS",
       "photo": "images/artist-summary.jpg",
       "header": "images/MN-Header.jpg",
+      "video": "video/NDVideo.mp4",
       "bio": "Pronounced (Many Names) Emanating an essence that is synth driven and infused with mystical lyricism, MNYNMS presents a musical platform that represents the art of sound and creative transcendence. A collaborative endeavor that streams from the minds of Jessica Wahlquist Lacey Youngblood and J.Childs, MNYNMS came to fruition organically, cultivating it’s artistry through multi-faceted principles and unparalleled energy. Driven by the craft of style and seeped in spectral roots, MNYNMS culminates a visionary aspect transported through many names and many lifetimes, entirely enveloped with dynamic elements of refinement.",
       "feature": "https://soundcloud.com/mnynms/you",
       "links": {
-        "facebook": "https://www.facebook.com/LAMBDA.SCR/",
-        "twitter": "https://twitter.com/princebiomass",
-        "soundcloud": "https://soundcloud.com/lammmbda"
+        "facebook": "https://www.facebook.com/MNYNMS",
+        "twitter": "https://twitter.com/mnynms",
+        "soundcloud": "https://soundcloud.com/mnynms"
       },
       "releases": [
         {
@@ -19,14 +20,14 @@
           "type": "EP",
           "name": "Rite fo Passage",
           "art": "images/MN-RiteOfPassage.jpg",
-          "buy": "www.amazon.com"
+          "buy": "https://www.amazon.com/dp/B01GHGJFME/ref=cm_sw_su_dp"
         },
         {
           "id": "SCR009",
           "type": "EP",
           "name": "Oracle Remixes",
           "art": "images/MN-Remixes.jpg",
-          "buy": "www.amazon.com"
+          "buy": "https://www.amazon.com/dp/B01GRA8GBG/ref=cm_sw_su_dp"
         }
       ]
     },
@@ -39,9 +40,9 @@
       "bio": "Night Drive co-founders, Rodney Connell and Brandon Duhon met after a young woman they were both unknowingly dating was killed in a car crash. The tragic event bonded the two, and shortly afterwards they began a musical collaboration. Inspired by sci-fi cinematic landscapes, Night Drive creates modern synth-pop that explores the darker currents of abstract emotion. Infectious melodies wrapped in thoughtful lyrics with pulsing dance beats unveil a stylish, energetic sound that has been featured in film, tv and radio around the world. With added drummer, Gibran Nassif, and touring with international bands such as Tesla Boy, Gold Fields and Jupiter, Night Drive has quickly garnered a reputation as a captivating, must see live show.",
       "feature": "https://soundcloud.com/nightdrivemusic/rise-and-fall",
       "links": {
-        "facebook": "https://www.facebook.com/LAMBDA.SCR/",
-        "twitter": "https://twitter.com/princebiomass",
-        "soundcloud": "https://soundcloud.com/lammmbda"
+        "facebook": "https://www.facebook.com/NightDriveMusic/",
+        "twitter": "https://twitter.com/wearenightdrive",
+        "soundcloud": "https://soundcloud.com/nightdrivemusic"
       },
       "releases": [
         {
@@ -49,21 +50,21 @@
           "type": "Single",
           "name": "Rise and Fall",
           "art": "images/ND-RiseFall.jpg",
-          "buy": "www.amazon.com"
+          "buy": "https://www.amazon.com/dp/B01LX4Z5JX/ref=cm_sw_r_cp_ep_dp_jEYlybNQ45FFS"
         },
         {
           "id": "SCR002",
           "type": "Single",
           "name": "Easy to Lie",
           "art": "images/ND-EasyToLie.jpg",
-          "buy": "www.amazon.com"
+          "buy": "https://www.amazon.com/gp/product/B00UL87FN6/ref=sr_1_2_rd?ie=UTF8"
         },
         {
           "id": "SCR001",
           "type": "Single",
           "name": "Young Rivals",
           "art": "images/ND-YoungRivals.jpg",
-          "buy": "www.amazon.com"
+          "buy": "https://www.amazon.com/gp/product/B00NLKHKAE/ref=sr_1_1_rd?ie=UTF8"
         }
       ]
     }
