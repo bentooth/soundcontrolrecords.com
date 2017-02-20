@@ -7,8 +7,7 @@ class Discography extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            releases: [],
-            hide: 'hide'
+            releases: []
         };
 
         this.getArtistData = this.getArtistData.bind(this);

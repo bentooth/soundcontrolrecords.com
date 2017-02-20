@@ -69,7 +69,7 @@ class FeaturedRelease extends React.Component{
                     <p>
                         { artist.summary }
                     </p>
-                </div> 
+                </div>
                 <MusicPlayer components={ [{ type: 'play', glyphicon: 'glyphicon-play'}, { type: 'stop', glyphicon: 'glyphicon-stop'}, { type: 'repeat', glyphicon: 'glyphicon-repeat'},] } initialColor="rgba(255,100,0,1)" activeColor={ artist.theme.color }/>
        
             </header>
