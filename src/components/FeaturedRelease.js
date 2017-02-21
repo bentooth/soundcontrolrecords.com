@@ -45,7 +45,7 @@ class FeaturedRelease extends React.Component{
     }
     /* combines the dom objects with their correlating abstract form */
     componentDidMount(){         
-        var featureWrapper = document.querySelector('#feature-wrapper'),
+        let featureWrapper = document.querySelector('#feature-wrapper'),
             featuretron = document.querySelector('#featuretron'),
             featureText = document.querySelector('.feature-text');
             featDefault.dom = featuretron;
@@ -71,7 +71,7 @@ class FeaturedRelease extends React.Component{
                     </p>
                 </div>
                 <MusicPlayer components={ [{ type: 'play', glyphicon: 'glyphicon-play'}, { type: 'stop', glyphicon: 'glyphicon-stop'}, { type: 'repeat', glyphicon: 'glyphicon-repeat'},] } initialColor="rgba(255,100,0,1)" activeColor={ artist.theme.color }/>
-       
+
             </header>
         )
     }
