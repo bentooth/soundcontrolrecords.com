@@ -51,7 +51,7 @@ class Discography extends React.Component {
                     <br/>
                     <h3 id="releaseTitle">{myReleases[key]["name"]} ({myReleases[key]["type"]})</h3>
                     <img src={myReleases[key]["art"]} className="img-responsive thumbnail" role="presentation"/>
-                    <button className="myButton" href={myReleases[key]["buy"]}>Buy</button>
+                    <a className="myButton" href={myReleases[key]["buy"]}>BUY</a>
                     <br/>
                 </div>
             )

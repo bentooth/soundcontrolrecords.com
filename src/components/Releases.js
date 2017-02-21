@@ -9,7 +9,7 @@ const Releases = ({releases}) => {
             <div key={key}>
                 <h3 id="releaseTitle">{myReleases[key]["name"]} ({myReleases[key]["type"]})</h3>
                 <img src={myReleases[key]["art"]} className="img-responsive thumbnail" role="presentation"/>
-                <a className="myButton" href={myReleases[key]["buy"]}>Buy</a>
+                <a className="myButton" href={myReleases[key]["buy"]}>BUY</a>
                 <hr />
             </div>
         )
