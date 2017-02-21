@@ -10,12 +10,12 @@ class ArtistProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            artists: [],
-            feature: ""
+            artists: []
         }
     }
 
     componentDidMount() {
+        //Axios.get("http://new.soundcontrolrecords.com/data.json")
         Axios.get("http://localhost:3000/data.json")
             .then((result) => {
                 let artists = result.data.artists;
@@ -44,7 +44,13 @@ class ArtistProfile extends React.Component {
 
                         <h1 className="page-header">{this.state.artists.name}</h1>
 
-                        <img src={this.state.artists.header} className="img-responsive" role="presentation"/>
+                        <div style=
+                                 {{
+                                    backgroundImage: 'url(' + this.state.artists.profile + ')',
+                                    'background-position': '50% 20%'
+                                 }}
+                             className='artist-profile-header col-lg-12 col-md-12 img-responsive' role="presentation">
+                        </div>
 
                         <div className="col-md-9">
                             <h2>ABOUT</h2>

@@ -58,15 +58,20 @@ p {
     margin-right: auto
 }
 
-.artist-photo{
+.artist-photo {
     height: 127px;
     width: 359px;
 }
 
 .artist-header {
-    height:200px;
+    height:300px;
     margin-bottom:30px;
 }
+
+.artist-profile-header {
+    height:400px;
+}
+
 .artist-header h1 {
     color: white;
 }

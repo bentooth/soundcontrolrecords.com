@@ -10,7 +10,7 @@ const ArtistSummary = ({artists}) => {
                         <div style={
                             {
                                 backgroundImage: 'url(' + artist.header + ')',
-                                'background-position': 'center'
+                                'background-position': '50% 65%'
                             }
                         }
                              className='artist-header col-lg-12 col-md-12 img-responsive' role="presentation"
