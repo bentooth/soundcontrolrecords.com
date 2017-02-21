@@ -47,12 +47,12 @@ class Discography extends React.Component {
 
         const releaseList = Object.keys(myReleases).map(function (key) {
             return (
-                <div key={key} className="col-md-3">
-                    <br/>
-                    <h3 id="releaseTitle">{myReleases[key]["name"]} ({myReleases[key]["type"]})</h3>
-                    <img src={myReleases[key]["art"]} className="img-responsive thumbnail" role="presentation"/>
+                <div key={key} className="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <div className="release">
+                        <h3><span>{myReleases[key]["name"]} <br/> ({myReleases[key]["type"]})</span></h3>
+                        <img src={myReleases[key]["art"]} className="img-responsive thumbnail" role="presentation"/>
+                    </div>
                     <a className="myButton" href={myReleases[key]["buy"]}>BUY</a>
-                    <br/>
                 </div>
             )
         });

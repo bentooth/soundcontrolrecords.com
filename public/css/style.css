@@ -1,4 +1,5 @@
 @import url('navigation.css');
+@import url('discography.css');
 @import url('sidebar.css');
 @import url('artists.css');
 @import url('https://fonts.googleapis.com/css?family=Abel|Cabin:400,700');
@@ -6,10 +7,6 @@
 h1, h2, h3, a {
     color: black;
     font-family: 'Abel';
-}
-
-#releaseTitle {
-    text-align: center;
 }
 
 p {
@@ -164,6 +161,7 @@ p {
 .myButton {
     position: relative;
     display: inline-block;
+    margin-top: 10px;
     width: 200px;
     height: auto;
     top: 0px;
