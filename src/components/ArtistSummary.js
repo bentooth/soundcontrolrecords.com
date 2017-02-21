@@ -1,27 +1,36 @@
 import React from 'react';
-import {Link} from 'react-router'
+import {Link} from 'react-router';
 
-const ArtistSummary = ({artists}) => {
-    return (
-        <div>
-            {artists.map((artist, index) => {
-                return (
-                    <Link to={artist.path}>
-                        <div style={
-                            {
-                                backgroundImage: 'url(' + artist.header + ')',
-                                'background-position': '50% 65%'
-                            }
-                        }
-                             className='artist-header col-lg-12 col-md-12 img-responsive' role="presentation"
-                             key={index}>
+export default class ArtistSummary extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    propagateArtist(){
+        let tempArtists = this.props.artists.map((artist, index) => {
+            let styler = {
+                backgroundPosition: '50% 60%',
+                backgroundImage: 'url('+ artist.header + ')',
+            };
+            return ( <Link to={artist.path}>
+                    <div style={ styler } className='artist-header col-lg-12 col-md-12 img-responsive' role="presentation" key={index}>
                             <h1>{artist.name}</h1>
-                        </div>
-                    </Link>
-                )
-            })}
-        </div>
-    )
-};
+                    </div>
+                </Link> );
+        });
+        return (<div> { tempArtists } </div>);
+    }
+    didComponentMount(){
+            setInterval(function(){
+                console.log(window.scrollY);
+            }, 1000);
+    }
+    render(){
+        console.log(this.props);
+        return (<div> 
+                    { this.propagateArtist() }
+               </div>);
+    }
+}
+/*
 
-export default ArtistSummary;
+*/
