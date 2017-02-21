@@ -12,20 +12,16 @@ export default class ArtistSummary extends React.Component {
                 backgroundImage: 'url('+ artist.header + ')',
             };
             return ( <Link to={artist.path}>
-                    <div style={ styler } className='artist-header col-lg-12 col-md-12 img-responsive' role="presentation" key={index}>
-                            <h1>{artist.name}</h1>
-                    </div>
-                </Link> );
+                        <div style={ styler } className='artist-header col-lg-12 col-md-12 col-sm-12 col-xs-12 img-responsive' role="presentation" key={index}>
+                                <h1>{artist.name}</h1>
+                        </div>
+                    </Link> );
         });
         return (<div> { tempArtists } </div>);
     }
-    didComponentMount(){
-            setInterval(function(){
-                console.log(window.scrollY);
-            }, 1000);
+    componentDidMount(){
     }
     render(){
-        console.log(this.props);
         return (<div> 
                     { this.propagateArtist() }
                </div>);
