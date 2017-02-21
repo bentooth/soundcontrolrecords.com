@@ -30,7 +30,9 @@ class Artists extends React.Component {
                     </div>
 
                     <div className="container">
-                        <h1 className="page-header">ARTISTS</h1>
+                        <div className="page-header">
+                            <h1>ARTISTS</h1>
+                        </div>
                     </div>
 
                     <div className="container">

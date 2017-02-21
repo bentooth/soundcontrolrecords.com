@@ -17,10 +17,8 @@ const Main = () => {
             </div>
 
             <div className="container">
-                <div className="col-md-8">
-                    <h1 className="page-header">
-                        LATEST NEWS
-                    </h1>
+                <div className="col-lg-12 col-md-12 page-header">
+                    <h1> LATEST NEWS </h1>
                 </div>
             </div>
 

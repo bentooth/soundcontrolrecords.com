@@ -1,0 +1,9 @@
+.sidebar h3{
+    position: relative;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px black;
+}
