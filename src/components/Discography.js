@@ -1,34 +1,31 @@
 import React from 'react';
 import FeaturedRelease from '../components/FeaturedRelease';
 import Nav from '../components/Nav';
+import MusicPlayer from '../components/MusicPlayer/music-player';
 import Axios from 'axios';
 
 class Discography extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            test: null,
             releases: []
         };
 
         this.getArtistData = this.getArtistData.bind(this);
         this.getReleaseData = this.getReleaseData.bind(this);
     }
-
-    componentDidMount() {
-        this.getArtistData();
-    }
-
     getArtistData() {
         //Axios.get("http://new.soundcontrolrecords.com/data.json")
-        Axios.get("http://localhost:3000/data.json")
-            .then((result) => {
+        Axios.get("http://localhost:3000/data.json").then((result) => {
+                console.log(result.data.artists);
                 let artists = result.data.artists;
-                artists.forEach(artists => {
-                    this.getReleaseData(artists.releases)
-                })
-            });
-    }
+                artists.forEach((artist) => {
+                    this.getReleaseData(artist.releases);
+                });
 
+            })
+    }
     getReleaseData(releases) {
         if (this.state.releases === []) {
             this.setState({
@@ -40,23 +37,26 @@ class Discography extends React.Component {
             })
         }
     }
-
-    render() {
-
+    loadComponent(){
         const myReleases = this.state.releases;
-
         const releaseList = Object.keys(myReleases).map(function (key) {
             return (
                 <div key={key} className="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                     <div className="release">
-                        <h3><span>{myReleases[key]["name"]} <br/> ({myReleases[key]["type"]})</span></h3>
-                        <img src={myReleases[key]["art"]} className="img-responsive thumbnail" role="presentation"/>
+                        <MusicPlayer components={ ['play', 'stop'] } initialColor="rgba(0,0,0,1)" activeColor="rgba(200,200,200,1)" id={ key } src={ myReleases[key]["audio"] } />
+                        <h3><span>{ myReleases[key]["name"] } <br/> ({myReleases[key]["type"]})</span></h3>
+                        <img src={ myReleases[key]["art"] } className="img-responsive thumbnail" role="presentation"/>
                     </div>
-                    <a className="myButton" href={myReleases[key]["buy"]}>BUY</a>
+                    <a className="myButton" href={ myReleases[key]["buy"] }>BUY</a>
                 </div>
-            )
+            );
         });
-
+        return (<div>{ releaseList }</div>);
+    }
+    componentDidMount() {
+        this.getArtistData();
+    }
+    render(){
         return (
             <div className="main-container">
                 <br />
@@ -70,13 +70,12 @@ class Discography extends React.Component {
                 </div>
 
                 <div className="container">
-                    {releaseList}
+                    { this.loadComponent() }
                 </div>
             </div>
         )
     }
 }
-;
 
 Discography.defaultProps = {
     releases: []

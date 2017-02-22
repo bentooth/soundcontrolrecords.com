@@ -1,5 +1,6 @@
 @import url('navigation.css');
 @import url('discography.css');
+@import url('musicplayer.css');
 @import url('sidebar.css');
 @import url('artists.css');
 @import url('https://fonts.googleapis.com/css?family=Abel|Cabin:400,700');
@@ -242,30 +243,7 @@ p {
 .feature-text p:first-line {
     color: purple;
 }
-/* audio player options*/
-.player-components{
-    width: 25px;
-    height: 25px;
-    color: white;
-    transition: background 1s;
-}
 
-.player-components span[class *= 'glyphicon']{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-.player-components:hover{
-    cursor: pointer;
-}
-.player-wrapper{
-   position: absolute;
-   z-index:0;
-}
 /* animations */
 @keyframes lightLanding {
     0%{

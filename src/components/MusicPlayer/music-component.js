@@ -53,7 +53,7 @@ import React from 'react';
         
     
 */
-export class MusicComponent extends React.Component{
+export default class MusicComponent extends React.Component{
     constructor(props){
         super(props);
         this.audioController = null;
@@ -64,22 +64,30 @@ export class MusicComponent extends React.Component{
                 background: this.props.initialColor
             }
         };
-
-        this.changeColor = this.changeColor.bind(this)
+    }
+    generateIcon(){
+        switch(this.props.type){
+            case 'play':
+                this.setState({ icon: 'glyphicon-play'});
+                break;
+            case 'stop':
+                this.setState({ icon: 'glyphicon-stop'});
+                break;
+            case 'repeat':
+                this.setState({ icon: 'glyphicon-repeat'});
+                break;
+            default:
+        }
     }
     /* default actions for when user hovers over music coponents */
     hoverOff(){
-        if(this.isActive){
-             this.changeColor();
-        } else {
-             this.changeColor();
-        }
+         this.setState({ styler: { background: this.props.initialColor }});
     }
     pressed(){
         this.isActive = !this.isActive;
         switch(this.props.type){
             case 'play':
-                if(this.state.icon === this.props.glyphicon){
+                if(this.state.icon === 'glyphicon-play'){
                     this.audioController.play();
                     this.setState({ icon: 'glyphicon-pause'});
                 } else{
@@ -98,8 +106,11 @@ export class MusicComponent extends React.Component{
     changeColor(){
         this.setState({ styler:{ background: this.props.activeColor }});
     }
+    componentWillMount(){
+        this.generateIcon();
+    }
     componentDidMount(){
-        this.audioController = document.querySelector('#audio-controller');
+        this.audioController = document.querySelector('#audio-controller-'+this.props.id);
         /*  
             this will grab every player component on the dom 
             so be aware if you put multiple players on site 
@@ -108,7 +119,7 @@ export class MusicComponent extends React.Component{
     }
     render(){
         return (
-            <div style={ this.state.styler } className={"player-components "+this.props.type} onMouseOut={(e)=>{ this.hoverOff() } } onMouseOver={ (e)=>{ this.changeColor(); } } onClick={ (e)=>{ this.pressed(); } } >
+            <div style={ this.state.styler } className={"player-components "+this.props.type} onMouseOut={ (e)=>{ this.hoverOff(); } } onMouseOver={ (e)=>{ this.changeColor(); } } onClick={ (e)=>{ this.pressed(); } } >
                  <span className={ "glyphicon "+this.state.icon }></span>
             </div>
         );
