@@ -43,7 +43,7 @@ export default class FeaturedRelease extends React.Component{
                     <div className="feature-icon" style={ { background: "url(./images/icon.jpg)" } } ></div>
                     <canvas id="featuretron"></canvas>
                 </div>
-                <MusicPlayer components={ ['play', 'stop', 'repeat'] } initialColor="rgba(0,0,0,1)" activeColor="rgba(200,200,200,1)" id="audio-controller-featured" src="audio/Night%20Drive%20-%20Rise%20and%20Fall.wav"/>
+                <MusicPlayer components={ ['play', 'stop', 'repeat'] } initialColor="rgba(0,0,0,1)" activeColor="rgba(200,200,200,1)" id="featured" src="audio/Night%20Drive%20-%20Rise%20and%20Fall.wav"/>
                 <Slider width='800' height='25' />
             </header>
         );
