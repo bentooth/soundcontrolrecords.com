@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 
 const Nav = () => {
     return (
-        <nav className="navbar" role="navigation">
+        <nav className="navbar navbar-collapse" role="navigation">
             <div>
                 <div className="nav-header">
                     <a href="/"><img src='images/sound-control-logo.png' role="presentation"/></a>
