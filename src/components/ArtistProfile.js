@@ -15,8 +15,8 @@ class ArtistProfile extends React.Component {
     }
 
     componentDidMount() {
-        Axios.get("http://new.soundcontrolrecords.com/data.json")
-        //Axios.get("http://localhost:3000/data.json")
+        //Axios.get("http://test.soundcontrolrecords.com/data.json")
+        Axios.get("http://localhost:3000/data.json")
             .then((result) => {
                 let artists = result.data.artists;
                 for (let i = 0; i < artists.length; i++) {
