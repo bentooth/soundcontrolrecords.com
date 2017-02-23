@@ -21,7 +21,7 @@
           "name": "Rite of Passage",
           "art": "images/MN-RiteOfPassage.jpg",
           "buy": "https://www.amazon.com/dp/B01GHGJFME/ref=cm_sw_su_dp",
-          "audio": "audio/kartunehustla-3111597.mp3"
+          "audio": "audio/MNYNMS%20-%20You.wav"
         },
         {
           "id": "SCR009",
@@ -29,7 +29,7 @@
           "name": "Oracle Remixes",
           "art": "images/MN-Remixes.jpg",
           "buy": "https://www.amazon.com/dp/B01GRA8GBG/ref=cm_sw_su_dp",
-          "audio": "audio/kartunehustla-1765619.mp3"
+          "audio": "audio/MNYNMS%20-%20Oracle%20(FM%20Attack%20Remix).wav"
         }
       ]
     },
@@ -57,7 +57,7 @@
         },
         {
           "id": "SCR002",
-          "type": "Single",
+          "type": "Single/Remixes",
           "name": "Easy to Lie",
           "art": "images/ND-EasyToLie.jpg",
           "buy": "https://www.amazon.com/gp/product/B00UL87FN6/ref=sr_1_2_rd?ie=UTF8",
@@ -65,7 +65,7 @@
         },
         {
           "id": "SCR001",
-          "type": "Single",
+          "type": "Single/Remixes",
           "name": "Young Rivals",
           "art": "images/ND-YoungRivals.jpg",
           "buy": "https://www.amazon.com/gp/product/B00NLKHKAE/ref=sr_1_1_rd?ie=UTF8",
