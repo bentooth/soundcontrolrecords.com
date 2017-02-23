@@ -36,15 +36,16 @@ p {
 }
 
 #footer {
-    width: 100vw;
+    position: static;
     height: 60px;
+    width: auto;
+    bottom: 0;
+    right: 0;
     background-color: black;
-    margin-top:80px;
-    padding-top:20px;
-    padding-bottom:20px;
 }
 
 #footer p {
+    padding-top: 20px;
     color:white;
     padding-left: 30px;
 }
@@ -162,13 +163,14 @@ p {
 .myButton {
     position: relative;
     display: inline-block;
-    margin-top: 10px;
+
     width: 200px;
     height: auto;
     top: 0px;
     left: 0px;
     padding: 5px 10px 5px 10px;
     margin-left: 25px;
+    margin-bottom: 15px;
     text-decoration: none;
     list-style: none;
     border: 3px solid black;
