@@ -36,14 +36,17 @@
 .nav-menu li{
     position: relative;
     display: inline-block;
+    text-decoration: none;
+    list-style: none;
+}
+.nav-menu li div{
+    position: relative;
     width: auto;
     height: auto;
     top: 0px;
     left: 0px;
     padding: 5px 10px 5px 10px;
     margin-left: 5px;
-    text-decoration: none;
-    list-style: none;
     border: 3px solid black;
     text-align: center;
     background: white;
@@ -52,15 +55,20 @@
     transition: background 1s;
     cursor: pointer;    
 }
-.nav-menu li:hover{
+.nav-menu li div:hover{
     top: 1px;
     left: 1px;
+    background: rgba(200,200,200,1);
 }
 a:hover{
+    color: dimgray;
     text-decoration: none;
     list-style: none;
 }
-
+a:active{
+     text-decoration: none;
+    list-style: none;
+}
 /* Animation for nav */
 
 @keyframes fadeIn {
