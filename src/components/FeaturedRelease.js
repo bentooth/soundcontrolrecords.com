@@ -2,11 +2,7 @@ import React from 'react';
 import Featuretron from './Feature/featuretron';
 import MusicPlayer from './MusicPlayer/music-player';
 import Slider from './MusicPlayer/music-slider';
-
-
-/* create your abstract objects here for dom manipulation later */
-let featDefault = new Featuretron(["rf.jpg"], {}, {}, null);
-/* simulating a mongodb document here for artist featured */
+import Axios from 'axios';
     
 export default class FeaturedRelease extends React.Component{
     constructor(){
@@ -14,48 +10,60 @@ export default class FeaturedRelease extends React.Component{
         /* calling components from custom player */
         /* the state of the Featured header */
         this.state = {
+            featured: {},
             playerStyle: {
                 background: 'rgba(0,0,0,1)',
                 color: 'rgba(255,255,255,1)',
                 boxShadow: '0px 0px transparent',
             }
         };
-    }
-    loadPlayer(){
+        /* place featured artists name here */
+        this.featuredArtist = 'Night-Drive';
+        this.width = 1180;
+        this.height = 25;
+        this.offset = 10;
     }
     /* combines the dom objects with their correlating abstract form */
     componentDidMount(){      
-        
-        let featureWrapper = document.querySelector('#feature-wrapper'),
-            featuretron = document.querySelector('#featuretron');
-            featDefault.dom = featuretron;
-            featDefault.ctx = featuretron.getContext('2d');
-        
-            featDefault.ctx.canvas.width = featureWrapper.scrollWidth;
-            featDefault.ctx.canvas.height = "400px";
-            featDefault.initialize();
-            featDefault.render();
+        Axios.get("http://localhost:3000/data.json")
+            .then((result) => {
+            /* choose artist feature based on
+            index in data.json
+ 
+            CURRENTLY NOT WORKING
+            BEN IF YOU CAN FIX IT PLEASE DO XD SHIT lol
+            
+            this.state.featured = result.data.artists.map(artist =>{
+                if(artist.hasOwnProperty(this.featuredArtist)){
+                    return artist;
+                }
+            }); 
+            */
+         }).catch(err =>{ console.log(err.response.data); });
+    
     }
     render(){
+        /*      
+                below is the current placeholder for feature banner until i can figure out
+                the issue of passing the artist images through this featuretron object
+                
+                <Featuretron width={ this.width } height="350" id="featured" featured={ this.state.featured } />
+                
+                currently music player pulls the source by hardcode, so we need to fix this later so we don't have
+                to manually put in the source for the feature. Again this can be fixed with Axios I'm just having problems
+                with it currently
+         */
         return (
             <header id="feature-header" className="row">
-                <div id="feature-wrapper" className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div className="feature-icon" style={ { background: "url(./images/icon.jpg)" } } ></div>
-                    <canvas id="featuretron"></canvas>
-                </div>
-                <MusicPlayer components={ ['play', 'stop', 'repeat'] } initialColor="rgba(0,0,0,1)" activeColor="rgba(200,200,200,1)" id="featured" src="audio/Night%20Drive%20-%20Rise%20and%20Fall.wav"/>
-                <Slider width='800' height='25' />
+                <div className="feature-icon" style={ { background: 'url(images/icon.jpg)'} }></div>
+                
+            
+                <img src="images/rf.jpg" style={ { width: (this.width - this.offset)+"px", height: 'auto'} }/>
+        
+                <MusicPlayer components={ ['play', 'stop'] } initialColor="rgba(0,0,0,1)" activeColor="rgba(200,200,200,1)" id="featured" src="audio/Night%20Drive%20-%20Rise%20and%20Fall.wav"/>
+                <Slider width={ this.width } height={ this.height } id="featured" featured={ this.state.featured }/>
             </header>
         );
     }
 }
-                    /*
-                    <div className="artist-links">
-                        <a className="spread-btn btn-spotify"
-                           href="https://open.spotify.com/track/5hl22gaWiQVhI6rYFmfJvq"><span className="glyphicon glyphicon-cd"></span></a>
-
-                        <a className="spread-btn btn-artist" href="http://www.nightdrivemusic.com/"><span className="glyphicon glyphicon-globe"></span></a>
-
-                        <a className="spread-btn btn-buy" href="#"><span className="glyphicon glyphicon-shopping-cart"></span></a>
-                    </div>
-                    */
+            

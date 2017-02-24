@@ -1,17 +1,32 @@
-export default class Featuretron {
-    constructor(images, dom, audioController, ctx){
-        this.dom = null,
+import React from 'react';
+
+export default class Featuretron extends React.Component{
+    constructor(props){
+        super(props);
         this.audioController = null,
         this.ctx = null,
-        this.images = images;
         this.convertedImgs = [];
+        this.state = {
+            images: null,
+        }
+        this.width = this.props.width;
+        this.height = this.props.height;
     }
     createImg(){
-       this.convertedImgs = this.images.map((src)=>{
-           var tempImg = document.createElement('img');
-           tempImg.setAttribute('src', './images/'+src);
-           return tempImg;
-       });
+       if(typeof this.state.images === "string"){
+            console.log(this.state.images);
+            let tempArr = [];
+            let tempImg = document.createElement('img'.toUpperCase());
+            tempArr.push(this.state.images);
+            this.convertedImgs = tempArr;
+       }
+       else if(this.state.images instanceof Array){
+            this.convertedImgs = this.state.images.map((src)=>{
+               var tempImg = document.createElement('img'.toUpperCase());
+               tempImg.setAttribute('src', src);
+               return tempImg;
+            });
+       }
     }
     drawImages(){
        this.ctx.restore();
@@ -26,7 +41,24 @@ export default class Featuretron {
     initialize(){
        this.createImg();
     }
-    render(){
+    update(){
         this.drawImages();
+    }
+    componentDidMount(){
+        let featuretron = document.querySelector('#featuretron-'+this.props.id);
+        this.audioController = document.querySelector('#audio-controller-'+this.props.id);
+        this.ctx = featuretron.getContext('2d');
+    
+        this.initialize();
+        
+        let sequence = setInterval(() => { this.update(); }, this.fps);
+        console.log(this.props.featured);
+    }
+    render(){
+        return (
+            <div>
+                <canvas id={ "featuretron-"+this.props.id } width={ this.width+"px" } height={ this.height+"px" } style={ { width: this.width+"px", height: this.height+"px" } }></canvas>
+            </div>
+        );
     }
 } 

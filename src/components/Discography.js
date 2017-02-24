@@ -19,7 +19,6 @@ class Discography extends React.Component {
         //Axios.get("http://test.soundcontrolrecords.com/data.json")
         Axios.get("http://localhost:3000/data.json")
               .then((result) => {
-                console.log(result.data.artists);
                 let artists = result.data.artists;
                 artists.forEach((artist) => {
                     this.getReleaseData(artist.releases);

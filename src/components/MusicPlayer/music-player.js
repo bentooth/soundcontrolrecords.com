@@ -40,7 +40,7 @@ export default class MusicPlayer extends React.Component{
     }
     render(){
         return (
-            <div className="player-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id={ "player-"+this.props.id } className="player-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <audio id={ "audio-controller-"+this.props.id }>
                     <source src= { this.state.src }/>
                 </audio>

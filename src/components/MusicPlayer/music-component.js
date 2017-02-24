@@ -87,12 +87,12 @@ export default class MusicComponent extends React.Component{
         this.isActive = !this.isActive;
         switch(this.props.type){
             case 'play':
-                if(this.state.icon === 'glyphicon-play'){
-                    this.audioController.play();
-                    this.setState({ icon: 'glyphicon-pause'});
-                } else{
+                if(this.state.icon === 'glyphicon-pause'){
                     this.audioController.pause();
                     this.setState({ icon: 'glyphicon-play'}); 
+                } else{
+                    this.audioController.play();
+                    this.setState({ icon: 'glyphicon-pause'});
                 }
                 break;
             case 'stop':
@@ -114,8 +114,13 @@ export default class MusicComponent extends React.Component{
         /*  
             this will grab every player component on the dom 
             so be aware if you put multiple players on site 
-                                                            */
-        this.allComponents = document.querySelectorAll('.player-components'); 
+            
+            until i come back to beef up these features i will leave the code below
+            untouched
+                                                         
+        this.allComponents = document.querySelectorAll('#player-'+this.props.id); 
+         */
+
     }
     render(){
         return (

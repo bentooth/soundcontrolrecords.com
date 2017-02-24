@@ -1,0 +1,36 @@
+/* featured jumbotron */
+#feature-header{
+    position: relative;
+}
+#featureWrapper{
+    position: relative;
+    z-index: 1;
+}
+#featuretron{
+    border-radius: 2vw 2vw 0% 0%;
+    background: yellow;
+}
+/* artist icon that appears over feature banner to show user who is featured if necessary */
+.feature-icon{
+    position: absolute;
+    display: block;
+    z-index: 90;
+    right: 5%;
+    background-position: center;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    transform: translate(10px, 10px);
+    -moz-transform: translate(10px, 10px);
+    -webkit-transform: translate(10px, 10px);
+    -ms-transform: translate(10px, 10px);
+    animation: lightLanding 2s ease-in-out normal forwards;
+    -moz-animation: lightLanding 2s ease-in-out normal forwards;
+    -webkit-animation: lightLanding 2s ease-in-out normal forwards;
+    -o-animation: lightLanding 2s ease-in-out normal forwards;
+    background: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50% 50% 50% 50%;
+}

@@ -50,6 +50,7 @@ class ArtistProfile extends React.Component {
                                     'background-position': '50% 20%'
                                  }}
                              className='artist-profile-header col-lg-12 col-md-12 img-responsive' role="presentation">
+                            <Links links={this.state.artists.links} />
                         </div>
 
                         <div className="col-md-9">
@@ -67,9 +68,6 @@ class ArtistProfile extends React.Component {
                             <hr />
                             <Releases releases={this.state.artists.releases}/>
 
-                            <h2>LINKS</h2>
-                            <hr />
-                            <Links links={this.state.artists.links} />
                         </div>
                     </div>
                 </div>
