@@ -11,6 +11,10 @@ h1, h2, h3, a {
     font-family: 'Abel';
 }
 
+#spot {
+    font-size: 32px;
+}
+
 p {
     font-family :Helvetica, "Helvetica Neue", Arial, sans-serif;
 }

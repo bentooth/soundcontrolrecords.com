@@ -32,8 +32,9 @@ export default class MusicPlayer extends React.Component{
         };
     }
     loadComponents(){
-        var tempPackage = this.props.components.map((type)=>{
-          return <MusicComponent type={ type }  initialColor={ this.state.initial.color } activeColor={ this.state.active.color } id={ this.props.id }/>;        
+        var tempPackage = this.props.components.map((type , index) =>
+        {
+          return <MusicComponent key={index} type={ type }  initialColor={ this.state.initial.color } activeColor={ this.state.active.color } id={ this.props.id }/>;
         });
         return <div>{tempPackage}</div>;
        
@@ -42,7 +43,7 @@ export default class MusicPlayer extends React.Component{
         return (
             <div id={ "player-"+this.props.id } className="player-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <audio id={ "audio-controller-"+this.props.id }>
-                    <source src= { this.state.src }/>
+                    <source src={ this.state.src }/>
                 </audio>
                 { this.loadComponents() }
             </div>

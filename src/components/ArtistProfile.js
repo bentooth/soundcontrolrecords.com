@@ -10,12 +10,13 @@ class ArtistProfile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            artists: []
+            artists: [],
+            embed: null,
         }
     }
 
     componentDidMount() {
-        //Axios.get("http://test.soundcontrolrecords.com/data.json")
+        //Axios.get("http://soundcontrolrecords.com/data.json")
         Axios.get("http://localhost:3000/data.json")
             .then((result) => {
                 let artists = result.data.artists;
@@ -23,11 +24,11 @@ class ArtistProfile extends React.Component {
                     if (this.props.params.username === artists[i].id) {
                         this.setState({
                             artists: artists[i],
-                            feature: artists[i].feature
+                            embed: artists[i].embed
                         });
 
                         SC.initialize({client_id: 'qar87rq7vEGGfgjM0PqrmTBUYhSzUcQ5'});
-                        SC.oEmbed(this.state.feature, {element: document.getElementById('widget')});
+                        SC.oEmbed(this.state.embed, {element: document.getElementById('sc-embed')});
                     }
                 }
             });
@@ -44,8 +45,7 @@ class ArtistProfile extends React.Component {
 
                         <h1 className="page-header">{this.state.artists.name}</h1>
 
-                        <div style=
-                                 {{
+                        <div style={{
                                     backgroundImage: 'url(' + this.state.artists.profile + ')',
                                     'background-position': '50% 20%'
                                  }}
@@ -57,7 +57,7 @@ class ArtistProfile extends React.Component {
                             <h2>ABOUT</h2>
                             <hr />
 
-                            <div id="widget"></div>
+                            <div id="sc-embed"></div>
                             <br />
                             <About artists={this.state.artists}/>
 

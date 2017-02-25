@@ -125,7 +125,7 @@ export default class MusicComponent extends React.Component{
     render(){
         return (
             <div style={ this.state.styler } className={"player-components "+this.props.type} onMouseOut={ (e)=>{ this.hoverOff(); } } onMouseOver={ (e)=>{ this.changeColor(); } } onClick={ (e)=>{ this.pressed(); } } >
-                 <span className={ "glyphicon "+this.state.icon }></span>
+                 <span className={ "glyphicon "+this.state.icon } />
             </div>
         );
     }

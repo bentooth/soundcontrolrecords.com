@@ -45,9 +45,9 @@ export default class Nav extends React.Component{
         }
     }
     makeList(){
-        let tempMenu = this.menus.map(menu => {
+        let tempMenu = this.menus.map((menu, index) => {
             return (
-                <Link to={ "/"+(menu === 'news'? '': menu)}>
+                <Link to={ "/"+(menu === 'news'? '': menu)} key={index}>
                     <li>
                         <div onMouseUp={ (e) => { this.lift() }} onMouseDown={ (e) => { this.pressed(menu) }} style={ this.state[menu]}>
                             <span>{menu.toUpperCase()}</span>
@@ -62,7 +62,7 @@ export default class Nav extends React.Component{
         <nav className="navbar navbar-collapse" role="navigation">
             <div>
                 <div className="nav-header">
-                    <a href="/"><img src='images/sound-control-logo.png' role="presentation"/></a>
+                    <a href="/"><img className="img-responsive" src='images/sound-control-logo.png' role="presentation"/></a>
                 </div>
 
                 <div className="menu-wrapper">

@@ -52,12 +52,11 @@ export default class Featuretron extends React.Component{
         this.initialize();
         
         let sequence = setInterval(() => { this.update(); }, this.fps);
-        console.log(this.props.featured);
     }
     render(){
         return (
             <div>
-                <canvas id={ "featuretron-"+this.props.id } width={ this.width+"px" } height={ this.height+"px" } style={ { width: this.width+"px", height: this.height+"px" } }></canvas>
+                <canvas id={ "featuretron-"+this.props.id } width={ this.width+"px" } height={ this.height+"px" } style={ { width: this.width+"px", height: this.height+"px" } } />
             </div>
         );
     }

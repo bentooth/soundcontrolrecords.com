@@ -12,7 +12,7 @@ class Artists extends React.Component {
     }
 
     componentDidMount() {
-        //Axios.get("http://test.soundcontrolrecords.com/data.json")
+        //Axios.get("http://soundcontrolrecords.com/data.json")
         Axios.get("http://localhost:3000/data.json")
             .then((result) => {
                 this.setState({

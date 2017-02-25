@@ -94,13 +94,13 @@ export default class Slider extends React.Component{
         });
         this.initialize();
      
-        let sequence = setInterval(() => { this.update(); }, this.fps);
+        //let sequence = setInterval(() => { this.update(); }, this.fps);
     }
     render(){
         
         return (
             <div className="slider-wrapper">
-                <canvas  width={ this.width+"px" } height={ this.height+"px" } style={ this.state.styler } id={ "music-slider-"+this.props.id } className="slider"></canvas>
+                <canvas  width={ this.width+"px" } height={ this.height+"px" } style={ this.state.styler } id={ "music-slider-"+this.props.id } className="slider" />
             </div>
         );
     }
