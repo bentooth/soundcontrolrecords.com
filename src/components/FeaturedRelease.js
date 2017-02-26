@@ -1,6 +1,6 @@
 import React from 'react';
 import MusicPlayer from './MusicPlayer/music-player';
-/*import Slider from './MusicPlayer/music-slider';*/
+import Slider from './MusicPlayer/music-slider';
 /*import Featuretron from './Feature/featuretron';*/
 import Axios from 'axios';
 
@@ -10,9 +10,9 @@ export default class FeaturedRelease extends React.Component{
         /* calling components from custom player */
         /* the state of the Featured header */
         this.state = {
-            id: "",
-            img: "",
-            song: "",
+            id: null,
+            img: null,
+            song: null,
             playerStyle: {
                 background: 'rgba(0,0,0,1)',
                 color: 'rgba(255,255,255,1)',
@@ -48,6 +48,7 @@ export default class FeaturedRelease extends React.Component{
     }
 
     render() {
+        console.log(this.state.song+"------");
         /*
              Not sure why this.state.song doesn't work when passing to MusicPlayer :(
              Also, I think I broke Slider
@@ -58,13 +59,15 @@ export default class FeaturedRelease extends React.Component{
             <header id="feature-header" className="row">
                 <a href="http://www.spin.com/2016/11/night-drive-rise-and-fall-premiere-stream/"><img className="img-responsive" src={this.state.img} style={ { width: (this.width - this.offset)+"px", height: 'auto'} } role="presentation"/></a>
                 <MusicPlayer components={ ['play', 'stop'] } initialColor="rgba(0,0,0,1)" activeColor="rgba(200,200,200,1)" id="featured" src="audio/Night%20Drive%20-%20Rise%20and%20Fall.wav"/>
+                <Slider width={ this.width } height={ this.height } id="featured"/>
             </header>
+                
         );
     }
 }
 
 FeaturedRelease.defaultProps = {
-    id: "",
-    img: "",
-    song: ""
+    id: null,
+    img: null,
+    song: null,
 };

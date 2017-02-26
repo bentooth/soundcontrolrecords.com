@@ -94,7 +94,7 @@ export default class Slider extends React.Component{
         });
         this.initialize();
      
-        //let sequence = setInterval(() => { this.update(); }, this.fps);
+        let sequence = setInterval(() => { this.update(); }, this.fps);
     }
     render(){
         
