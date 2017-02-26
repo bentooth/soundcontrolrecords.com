@@ -18,35 +18,22 @@ import MusicComponent from './music-component';
     the styler allows you to pass and object that contains the neccesary colors and or
     css settings for the button you wanted implemented using javascript
 */
-export default class MusicPlayer extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            src: this.props.src,
-            initial: {
-                color: this.props.initialColor
-            },
-            active: {
-                color: this.props.activeColor
-            }
-        };
-    }
-    loadComponents(){
-        var tempPackage = this.props.components.map((type , index) =>
-        {
-          return <MusicComponent key={index} type={ type }  initialColor={ this.state.initial.color } activeColor={ this.state.active.color } id={ this.props.id }/>;
-        });
-        return <div>{tempPackage}</div>;
-       
-    }
-    render(){
-        return (
-            <div id={ "player-"+this.props.id } className="player-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <audio id={ "audio-controller-"+this.props.id }>
-                    <source src={ this.state.src }/>
-                </audio>
-                { this.loadComponents() }
-            </div>
-        );
-    }
-}
+
+const MusicPlayer = ({components, initialColor, activeColor, id, src}) => {
+
+    let tempPackage = components.map((type , index) => {
+        return <MusicComponent key={index} type={type} initialColor={initialColor} activeColor={activeColor} id={id}/>;
+    });
+
+    return(
+        <div id={"player-"+id} className="player-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <audio id={"audio-controller-"+id}>
+                <source src={src}/>
+            </audio>
+            {tempPackage}
+        </div>
+    )
+};
+
+export default MusicPlayer;
+

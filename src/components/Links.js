@@ -7,7 +7,6 @@ const Links = ({links}) => {
     const socialIcons = Object.keys(myLinks).map(function (key) {
         const btn = `btn-social-icon btn-${key}`;
         const fa = `fa fa-${key}`;
-        console.log(key);
         return (
             <div key={key}>
                 <a className={btn} href={myLinks[key]}>

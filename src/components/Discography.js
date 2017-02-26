@@ -14,6 +14,7 @@ class Discography extends React.Component {
 
         this.getArtistData = this.getArtistData.bind(this);
         this.getReleaseData = this.getReleaseData.bind(this);
+        this.loadComponent = this.loadComponent.bind(this);
     }
     getArtistData() {
         //Axios.get("http://soundcontrolrecords.com/data.json")
@@ -37,7 +38,7 @@ class Discography extends React.Component {
             })
         }
     }
-    loadComponent(){
+    loadComponent() {
         const myReleases = this.state.releases;
         const releaseList = Object.keys(myReleases).map(function (key) {
             return (
@@ -56,6 +57,7 @@ class Discography extends React.Component {
     componentDidMount() {
         this.getArtistData();
     }
+
     render(){
         return (
             <div className="main-container">

@@ -65,7 +65,7 @@ export default class MusicComponent extends React.Component{
             }
         };
     }
-    generateIcon(){
+    generateIcon() {
         switch(this.props.type){
             case 'play':
                 this.setState({ icon: 'glyphicon-play'});

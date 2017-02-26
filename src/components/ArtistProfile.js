@@ -47,7 +47,7 @@ class ArtistProfile extends React.Component {
 
                         <div style={{
                                     backgroundImage: 'url(' + this.state.artists.profile + ')',
-                                    'background-position': '50% 20%'
+                                    backgroundPosition: '50% 20%'
                                  }}
                              className='artist-profile-header col-lg-12 col-md-12 img-responsive' role="presentation">
                             <Links links={this.state.artists.links} />
