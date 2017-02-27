@@ -224,6 +224,49 @@ p {
     transition: background 1s;
     cursor: pointer;
 }
+
+.text-break { white-space: normal; }
+
+@media (max-width: 479px)
+{
+    .text-break {
+        white-space: normal;
+        width: 100px;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px)
+{
+    .text-break {
+        white-space: normal;
+        width: 200px;
+        margin-left: 5px;
+    }
+}
+
+
+.artist-text-break { white-space: normal; }
+
+@media (max-width: 479px)
+{
+    .artist-text-break {
+        white-space: normal;
+        width: 150px;
+        margin-left: 25%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px)
+{
+    .artist-text-break {
+        white-space: normal;
+        width: 300px;
+        margin-left: 20%;
+    }
+}
+
+
 .myButton:hover{
    background: rgba(200,200,200,1); 
 }

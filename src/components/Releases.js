@@ -13,7 +13,7 @@ const Releases = ({releases}) => {
                     <h3><span>{ myReleases[key]["name"] } <br/> ({myReleases[key]["type"]})</span></h3>
                     <img src={ myReleases[key]["art"] } className="img-responsive thumbnail" role="presentation"/>
                 </div>
-                <a className="myButton" href={ myReleases[key]["buy"] }>BUY</a>
+                <a className="myButton artist-text-break" href={ myReleases[key]["buy"] }>BUY</a>
             </div>
         )
     });

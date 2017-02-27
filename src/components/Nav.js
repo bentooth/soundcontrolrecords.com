@@ -73,7 +73,7 @@ export default class Nav extends React.Component{
             </nav>
 
             <nav className="navbar visible-xs">
-                <section>
+                <div className="button-break">
                     <ul className="nav-menu">
                         <li>
                             <div><Link to="/">NEWS</Link></div>
@@ -85,7 +85,7 @@ export default class Nav extends React.Component{
                             <div><Link to="artists">ARTISTS</Link></div>
                         </li>
                     </ul>
-                </section>
+                </div>
             </nav>
         </div>
         );

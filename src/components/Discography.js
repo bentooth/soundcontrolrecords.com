@@ -17,8 +17,8 @@ class Discography extends React.Component {
         this.loadComponent = this.loadComponent.bind(this);
     }
     getArtistData() {
-        //Axios.get("http://soundcontrolrecords.com/data.json")
-        Axios.get("http://localhost:3000/data.json")
+        Axios.get("http://soundcontrolrecords.com/data.json")
+        //Axios.get("http://localhost:3000/data.json")
               .then((result) => {
                 let artists = result.data.artists;
                 artists.forEach((artist) => {
@@ -48,7 +48,7 @@ class Discography extends React.Component {
                         <h3><span>{ myReleases[key]["name"] } <br/> ({myReleases[key]["type"]})</span></h3>
                         <img src={ myReleases[key]["art"] } className="img-responsive thumbnail" role="presentation"/>
                     </div>
-                    <a className="myButton" href={ myReleases[key]["buy"] }>BUY</a>
+                    <a className="myButton text-break" href={ myReleases[key]["buy"] }>BUY</a>
                 </div>
             );
         });

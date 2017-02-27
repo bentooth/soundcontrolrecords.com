@@ -30,6 +30,16 @@
     bottom: 25px;
     left: 200px;
 }
+
+
+@media (max-width: 479px)
+{
+    .navbar {
+        left: 0%;
+        width: 50%;
+    }
+}
+
 .nav-menu {
    position: relative; 
 }
