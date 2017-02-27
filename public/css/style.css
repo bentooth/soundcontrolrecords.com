@@ -15,8 +15,18 @@ h1, h2, h3, a {
     font-size: 32px;
 }
 
+#blog {
+    font-size: 17px;
+    font-family :"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#quote {
+    font-size: 17px;
+    font-family :"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 p {
-    font-family :Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-family :"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .center {
@@ -43,7 +53,6 @@ p {
 #footer {
     position: static;
     height: 60px;
-    width: auto;
     bottom: 0;
     right: 0;
     background-color: black;

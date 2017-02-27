@@ -39,7 +39,6 @@ class FeaturedRelease extends React.Component{
     }
 
     render() {
-        console.log(this.state.feature);
         return (
             <header id="feature-header" className="row">
                 <a href="http://www.spin.com/2016/11/night-drive-rise-and-fall-premiere-stream/"><img className="img-responsive" src={this.state.feature.img} style={ { width: (this.width - this.offset)+"px", height: 'auto'} } role="presentation"/></a>

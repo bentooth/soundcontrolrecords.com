@@ -59,8 +59,10 @@ class ArtistProfile extends React.Component {
 
                             <div id="sc-embed"></div>
                             <br />
-                            <About artists={this.state.artists}/>
-
+                            <About artists={this.state.artists}/><br/>
+                            <div className="embed-responsive embed-responsive-16by9">
+                                <iframe className="embed-responsive-item" src={this.state.artists.youtube}></iframe>
+                            </div>
                         </div>
 
                         <div className="col-md-3">

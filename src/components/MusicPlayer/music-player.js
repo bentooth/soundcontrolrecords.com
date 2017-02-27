@@ -28,11 +28,15 @@ const MusicPlayer = ({components, initialColor, activeColor, id, src}) => {
     return(
         <div id={"player-"+id} className="player-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <audio id={"audio-controller-"+id}>
-                <source src={src}/>
+                <source src={src} />
             </audio>
             {tempPackage}
         </div>
     )
+};
+
+MusicPlayer.propTypes = {
+    src: React.PropTypes.string
 };
 
 export default MusicPlayer;

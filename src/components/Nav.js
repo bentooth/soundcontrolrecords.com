@@ -57,19 +57,37 @@ export default class Nav extends React.Component{
         });
         return (<div><ul className="nav-menu">{ tempMenu }</ul></div>);
     }
-    render(){
+    render() {
         return (
-        <nav className="navbar navbar-collapse" role="navigation">
-            <div>
-                <div className="nav-header">
-                    <a href="/"><img className="img-responsive" src='images/sound-control-logo.png' role="presentation"/></a>
-                </div>
+        <div>
+            <nav className="navbar navbar-collapse hidden-xs" role="navigation">
+                <div>
+                    <div className="nav-header">
+                        <a href="/"><img className="img-responsive" src='images/sound-control-logo.png' role="presentation"/></a>
+                    </div>
 
-                <div className="menu-wrapper">
-                    { this.makeList() }
+                    <div className="menu-wrapper">
+                        { this.makeList() }
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+
+            <nav className="navbar visible-xs">
+                <section>
+                    <ul className="nav-menu">
+                        <li>
+                            <div><Link to="/">NEWS</Link></div>
+                        </li>
+                        <li>
+                            <div><Link to="discography">DISCOGRAPHY</Link></div>
+                        </li>
+                        <li>
+                            <div><Link to="artists">ARTISTS</Link></div>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
         );
     }
 };

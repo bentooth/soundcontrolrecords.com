@@ -4,11 +4,11 @@ const Links = ({links}) => {
 
     const myLinks = links;
 
-    const socialIcons = Object.keys(myLinks).map(function (key) {
+    const socialIcons = Object.keys(myLinks).map((key, index) => {
         const btn = `btn-social-icon btn-${key}`;
         const fa = `fa fa-${key}`;
         return (
-            <div key={key}>
+            <div key={index}>
                 <a className={btn} href={myLinks[key]}>
                     <span className={fa}></span>
                 </a>

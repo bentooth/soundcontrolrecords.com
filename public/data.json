@@ -9,6 +9,7 @@
       "video": "video/NDVideo.mp4",
       "bio": "Pronounced (Many Names) Emanating an essence that is synth driven and infused with mystical lyricism, MNYNMS presents a musical platform that represents the art of sound and creative transcendence. A collaborative endeavor that streams from the minds of Jessica Wahlquist Lacey Youngblood and J.Childs, MNYNMS came to fruition organically, cultivating it’s artistry through multi-faceted principles and unparalleled energy. Driven by the craft of style and seeped in spectral roots, MNYNMS culminates a visionary aspect transported through many names and many lifetimes, entirely enveloped with dynamic elements of refinement.",
       "embed": "https://soundcloud.com/mnynms/you",
+      "youtube": "https://www.youtube.com/embed/fr8V2YavSTo",
       "featured": false,
       "featdata": {
         "img": "",
@@ -46,11 +47,12 @@
       "header": "images/ND-Header.jpg",
       "bio": "Night Drive co-founders, Rodney Connell and Brandon Duhon met after a young woman they were both unknowingly dating was killed in a car crash. The tragic event bonded the two, and shortly afterwards they began a musical collaboration. Inspired by sci-fi cinematic landscapes, Night Drive creates modern synth-pop that explores the darker currents of abstract emotion. Infectious melodies wrapped in thoughtful lyrics with pulsing dance beats unveil a stylish, energetic sound that has been featured in film, tv and radio around the world. With added drummer, Gibran Nassif, and touring with international bands such as Tesla Boy, Gold Fields and Jupiter, Night Drive has quickly garnered a reputation as a captivating, must see live show.",
       "embed": "https://soundcloud.com/nightdrivemusic/rise-and-fall",
+      "youtube": "https://www.youtube.com/embed/5HT3UssMgt8",
       "featured": true,
       "featdata": {
-        "img": "images/ND-feature-banner.jpg",
-        "song": "audio/Night%20Drive%20-%20Rise%20and%20Fall.wav"
-      },
+      "img": "images/ND-feature-banner.jpg",
+      "song": "audio/Night%20Drive%20-%20Rise%20and%20Fall.wav"
+    },
       "links": {
         "facebook": "https://www.facebook.com/NightDriveMusic/",
         "twitter": "https://twitter.com/wearenightdrive",
