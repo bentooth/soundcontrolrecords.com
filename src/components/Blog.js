@@ -21,8 +21,7 @@ const Blog = () => {
                 <br/>
 
                 The band explains,<i>
-                "'Rise and Fall' is about unexpected change as two people find themselves going in different directions. A sudden and untimely break-up.
-                Fuzzy keyboards and ethereal textures float in the stratosphere while an energetic rhythm section pulses underneath an emotionally charged vocal melody."</i>
+                "'Rise and Fall' is about unexpected change as two people find themselves going in different directions. A sudden and untimely break-up."</i>
                 <br/>
                 <br/>
                 We are ecstatic about their current trajectory and can’t wait for you to see and hear what the future holds for Night Drive!

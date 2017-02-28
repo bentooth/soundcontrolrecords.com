@@ -2,7 +2,7 @@
   "name": "SCR",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://test.soundcontrolrecords.com/",
+  "homepage": "http://soundcontrolrecords.com/",
   "devDependencies": {
     "gh-pages": "^0.12.0",
     "react-scripts": "0.9.0"
