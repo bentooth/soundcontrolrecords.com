@@ -24,8 +24,8 @@ class FeaturedRelease extends React.Component{
     }
 
     componentDidMount() {
-        Axios.get("http://soundcontrolrecords.com/data.json")
-        //Axios.get("http://localhost:3000/data.json")
+        //Axios.get("http://soundcontrolrecords.com/data.json")
+        Axios.get("http://localhost:3000/data.json")
             .then((result) => {
                 let artists = result.data.artists;
                 artists.forEach((artist) => {
